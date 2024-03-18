@@ -11,7 +11,7 @@ body, html {box-sizing: border-box;margin: 0; padding: 0; border: 0; font-family
 blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul {margin:0;padding:0;box-sizing: border-box}
 h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:400}
 ul {list-style:none}
-button, input, select {margin:0;box-sizing: border-box;font-family:$font-family}
+button, input, select {margin:0;box-sizing: border-box;}
 fieldset,img{border:0}
 *, :after, :before {box-sizing:inherit}
 img, video {height:auto;max-width:100%}
@@ -26,13 +26,6 @@ caption{position: absolute;width: 1px;height: 1px;clip: rect(0 0 0 0);overflow: 
 .clfx:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0;}
 button {cursor:pointer;outline:none;border:0;background-color:transparent}
 a[role="button"] {cursor:pointer;}
-
-body {
-    &.is-loading {
-      height:100%;
-      overflow: hidden;
-    }
-}
 
 .blind,.irtext {     
     position: absolute;
