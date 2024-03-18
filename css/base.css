@@ -37,3 +37,27 @@ a[role="button"] {cursor:pointer;}
     clip: rect(0, 0, 0, 0);
     border: 0;}
 
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+  }
+  ::-webkit-scrollbar-track,::-webkit-scrollbar-track-piece {
+      background-color: none
+  }
+  ::-webkit-scrollbar-button,::-webkit-scrollbar-thumb {
+      height: 9px;
+  }
+  ::-webkit-scrollbar-button:end,::-webkit-scrollbar-button:start {
+      width:5px;
+      background-color: none
+  }
+  ::-webkit-resizer,::-webkit-scrollbar-corner {
+      background-color: #d3d3d3;
+  }
+  ::-webkit-scrollbar-track {
+      background: #fff
+  }
+  ::-webkit-scrollbar-thumb {
+      background: rgba(101,106,118,.3);
+      border-radius: 2px;
+  }
