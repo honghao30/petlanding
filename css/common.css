@@ -1,5 +1,5 @@
 @import url(./base.css);
-html, body {background-color: #CFEDFF;width: 100%;height:100%;} 
+html, body {background-color: #CFEDFF;width: 100%;height:100%;overflow: hidden;} 
 .wrap {width:100%;max-width: 1066px;height:100%;margin: 0 auto;display: flex;justify-content: space-between;}
 .left-sect {display: flex;flex-direction: column; padding-top: 83px;}
 .left-sect .logo {text-align: center;}
@@ -49,7 +49,7 @@ html, body {background-color: #CFEDFF;width: 100%;height:100%;}
 
 .content_wrap {height: calc(100% - 60px);overflow-y: auto;}
 .page-location-area {padding: 24px 28px;display: flex;align-items: center;gap:5px;}
-.page-location-area .btn-back {width: 26px;height: 20px;background: url('../image/go-back.svg') no-repeat center;}
+.page-location-area .btn-back {width: 44px;height: 20px;background: url('../image/go-back.svg') no-repeat center;}
 .page-location-area p {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;font-size:24px;color:#222;}
 .article-title-area {display: flex;flex-direction: column;padding: 10px 28px 16px;gap:12px;}
 .article-title-area .label-top {display: flex;gap: 6px;}
@@ -59,10 +59,28 @@ html, body {background-color: #CFEDFF;width: 100%;height:100%;}
 .article-info .like {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_like.svg') no-repeat left center;padding-left: 22px;}
 .article-info .command {display: inline-block;width: 16px;font-size:16px;font-weight: 300;background: url('../image/icon_command.svg') no-repeat left center;padding-left: 22px;margin-left:14px;}
 .article-info .data {font-size:16px;color:#737980;}
-.article-cont {padding: 32px 0px;font-size:24px;color:#363636;line-height: 36px;border-bottom: 1px solid #F0F0F0;margin:0 28px;}
+.article-cont {padding: 32px 0px;font-size:24px;color:#363636;line-height: 36px;border-bottom: 1px solid #F0F0F0;margin:0 28px;overflow: hidden;}
 .article-cont .image-area {margin-bottom: 24px;} 
 .hash-tag {display: flex;gap: 8px;margin-top: 60px;}
 .hash-tag a {padding: 0 12px;height: 32px;background-color: #F4F8FF;border-radius: 10px;font-size:16px;color:#4783F5;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
 
 .command-area {display: flex;flex-direction: column;padding: 36px 28px;}
-.command-area .command-counter {background-color: #fff;padding:0 12px;height: 36px;border-radius: 10px;font-size:16px;color:#737980;border: 1px solid #B1CEFF;}
+.command-area .command-counter {background-color: #fff;padding:0 12px;height: 36px;border-radius: 10px;font-size:16px;color:#737980;border: 1px solid #B1CEFF;display: flex;align-items: center;justify-content: center;max-width: fit-content;gap: 6px;}
+.command-area .command-counter::before {content:'';display: inline-block;width:16px;height:16px;background: url('../image/icon_command.svg') no-repeat;}
+
+.command-list {margin-top: 28px;display: flex;flex-direction: column;}
+.command-inner-wrap {display: flex;justify-content: space-between;gap: 16px;}
+.command-inner-wrap .avatar {width: 48px;height: 48px;overflow: hidden;border-radius: 50%;background-color: #fff;padding:1px;}
+.command-inner-wrap .avatar img {width: 100%;height: 100%;}
+.command-inner-wrap .commond-cont {flex: 1;}
+.command-inner-wrap .commond-cont .command-info {display: flex;align-items: center;justify-content: space-between;}
+.command-inner-wrap .commond-cont .command-info .name {font-size: 17px;color:#737980;}
+.command-inner-wrap .commond-cont .command-info .btn-area {display: flex;gap: 24px;}
+.command-inner-wrap .commond-cont .command-info .btn-area .btn-like {width:20px;height:20px;background: url('../image/btn-like-default.svg') no-repeat;}
+.command-inner-wrap .commond-cont .command-info .btn-area .btn-like.is-active {background: url('../image/btn-like-active.svg') no-repeat;}
+.command-inner-wrap .commond-cont .command-info .btn-area .btn-oppose {width:21px;height:20px;background: url('../image/btn-oppose-default.svg') no-repeat;}
+.command-inner-wrap .commond-cont .command-info .btn-area .btn-oppose.is-active {background: url('../image/btn-oppose-active.svg') no-repeat;}
+.command-inner-wrap .commond-cont .command-info .btn-area .btn-report {width:20px;height:20px;background: url('../image/icon_report.svg') no-repeat;}
+.command-inner-wrap .commond-cont .command {margin-top:8px;font-size: 20px;color:#222222;line-height: 28px;}
+.btn-write-commond {margin-top: 40px;}
+.btn-write-commond img {width: 100%;}
