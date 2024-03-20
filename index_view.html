@@ -33,13 +33,13 @@
         <div class="right-frame">
             <div class="title-Wrap">
                 <h2><img src="./image/pettip_h2.svg" alt="PetTip" /></h2>
-                <button class="btn-share">
+                <button class="btn-share" onclick="snsShare()">
                     <span class="irtext">공유</span>
                 </button>
             </div>
             <div class="content_wrap">
                 <div class="page-location-area">
-                    <button type="button" class="btn-back"><span class="irtext">뒤로가기</span></button>
+                    <button type="button" class="btn-back" onclick="javascript:window.history.back();"><span class="irtext">뒤로가기</span></button>
                     <p>닉네임은 최대 닉네임은 최대닉네임은 최대닉네임은 최대닉네임은 최대닉네임은 최대 </p>
                 </div>
                 <div class="article-title-area">     
@@ -76,8 +76,8 @@
                                     <div class="command-info">
                                         <div class="name">강레오</div>
                                         <div class="btn-area">
-                                            <button type="button" class="btn-like"><span class="irtext">좋아요</span></button>
-                                            <button type="button" class="btn-oppose"><span class="irtext">반대</span></button>
+                                            <button type="button" class="btn-like toggle-btn"><span class="irtext">좋아요</span></button>
+                                            <button type="button" class="btn-oppose toggle-btn"><span class="irtext">반대</span></button>
                                             <button type="button" class="btn-report"><span class="irtext">신고</span></button>
                                         </div>
                                     </div>
@@ -96,8 +96,8 @@
                                     <div class="command-info">
                                         <div class="name">강레오</div>
                                         <div class="btn-area">
-                                            <button type="button" class="btn-like"><span class="irtext">좋아요</span></button>
-                                            <button type="button" class="btn-oppose"><span class="irtext">반대</span></button>
+                                            <button type="button" class="btn-like toggle-btn"><span class="irtext">좋아요</span></button>
+                                            <button type="button" class="btn-oppose toggle-btn"><span class="irtext">반대</span></button>
                                             <button type="button" class="btn-report"><span class="irtext">신고</span></button>
                                         </div>
                                     </div>
@@ -112,7 +112,32 @@
                         <img src="./image/btn-command.svg" alt="댓글 작성" />
                     </button>
                 </div>
-            </div>                  
+            </div>  
+            <!-- // 모달  -->
+            <div class="modal-wrap sns-share">
+                <div class="nobg-layer">
+                    <ul>
+                        <li>
+                            <button type="button">
+                                <img src="./image/btn-kakao.svg" alt="카카오" />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img src="./image/btn-facebook.svg" alt="페이스북" />
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button">
+                                <img src="./image/btn-x.svg" alt="x" />
+                            </button>
+                        </li>                                            
+                    </ul>
+                    <button type="button" class="btn-close modal-close">
+                        <img src="./image/btn-close-wt.svg" alt="닫기" />
+                    </button>
+                </div>
+            </div>
         </div>
         <!-- right -->
     </div>    
