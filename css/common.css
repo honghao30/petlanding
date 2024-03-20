@@ -25,10 +25,15 @@ html, body {background-color: #CFEDFF;width: 100%;height:100%;overflow: hidden;}
     display: none; /* Chrome, Safari, Opera*/
 }
 .tab-cont {width: 100%;padding-top: 6px;overflow: hidden;height: calc(100% - 180px);}
-.fillter-option {position: relative;}
+.fillter-option {position: relative;width: 120px;}
 .fillter-option .selected-option {position: relative;height:40px;min-width: 83px;font-size: 20px;color:#222222;text-align: left;margin-left: 23px;}
 .fillter-option .selected-option::after {content: '';display: block;position: absolute;right:0px;top: 50%;transform: translateY(-50%); width:9px;height:13px;background: url('../image/arrow_selectbox.svg') no-repeat;background-size: 100% auto;background-position: center center;}
-.fillter-option .option-list {display: none;}
+.fillter-option .selected-option.is-active::after {transform: rotate(-180deg); margin-top: -5px;}
+.fillter-option .option-list {display: none;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);position: absolute;left:28px;top:auto;background-color: #fff;padding: 10px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;z-index: 10;}
+.fillter-option .option-list li button {font-size: 20px;color:#222;display: block;padding: 8px 0;width: 100px;}
+.fillter-option .option-list li:hover,
+.fillter-option .option-list li.is-active button {background-color: #E8EFFF;border-radius: 7px;}
+.fillter-option .option-list.is-active {display: block;}
 .story-list-wrap {padding: 0 28px;overflow-y: auto;  height: calc(100% - 50px);
     overflow: auto;}
 .story-list {display: flex;flex-direction: column;gap: 12px;}

@@ -27,8 +27,23 @@ document.addEventListener("click", function(e) {
 
 // 댓글 
 const commonButton = document.querySelector('.btn-write-commond');
-commonButton.addEventListener('click', (e) => {
+commonButton && commonButton.addEventListener('click', (e) => {
     e.stopPropagation(); // 이벤트 버블링을 막음
     document.querySelector('.market-alert').classList.add('is-active');
 });
 
+// 드랍다운
+const selectedOptionButton = document.querySelector('.selected-option');
+
+selectedOptionButton.addEventListener('click', function() {
+    selectedOptionButton.classList.toggle('is-active');
+    selectedOptionButton.nextElementSibling.classList.toggle('is-active');    
+});
+
+// 영역 외를 클릭하면 드랍다운 닫기
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.filter-option')) {
+        selectedOptionButton.classList.remove('is-active');   
+        selectedOptionButton.nextElementSibling.classList.remove('is-active');       
+    }
+});
