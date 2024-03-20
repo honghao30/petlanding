@@ -12,7 +12,23 @@ const snsShare = () => {
 }
 
 // 모달 닫기
-const closeButton = document.querySelector('.modal-close');
-closeButton && closeButton.addEventListener('click', () => {
-    closeButton.parentElement.parentElement.classList.remove('is-active');
+const closeButtons = document.querySelectorAll('.modal-close');
+closeButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.closest('.modal-wrap').classList.remove('is-active');
+    });
 })
+
+document.addEventListener("click", function(e) {
+    if (document.querySelector('.market-alert.is-active') && !e.target.closest('.alert-wrap-inner')) {
+        document.querySelector('.market-alert.is-active').classList.remove('is-active');
+    }
+});
+
+// 댓글 
+const commonButton = document.querySelector('.btn-write-commond');
+commonButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // 이벤트 버블링을 막음
+    document.querySelector('.market-alert').classList.add('is-active');
+});
+

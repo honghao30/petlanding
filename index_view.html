@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>펫팁</title>
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.css">
 </head>
 <body>
     <div class="wrap">
@@ -57,7 +58,13 @@
                 </div>  
                 <div class="article-cont">
                     <div class="image-area">
-                        <img src="./image/temp/temp.png" alt="" />
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide"><img src="./image/temp/temp.png" alt="" /></div>
+                              <div class="swiper-slide"><img src="./image/temp/temp.png" alt="" /></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>                                                
                     </div>
                     상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.
                     <div class="hash-tag">
@@ -138,9 +145,42 @@
                     </button>
                 </div>
             </div>
+            <!-- sns 공유 -->
+            <div class="modal-wrap market-alert">
+                <div class="alert-wrap">
+                    <div class="alert-wrap-inner">
+                        <div class="alert-msg">
+                            댓글 작성은 앱에서만 가능해요.
+                            <strong>앱설치로 바로 가시겠어요?</strong>
+                        </div>
+                        <div class="button-area">
+                            <a href="#">
+                                <img src="./image/btn-google-market.svg" alt="구글 마켓" />
+                            </a>
+                            <a href="#">
+                                <img src="./image/btn-app-store.svg" alt="앱스토어" />
+                            </a>                            
+                        </div>
+                        <button type="button" class="btn-close-alert modal-close">
+                            <span class="irtext">닫기</span>
+                        </button>
+                    </div>      
+                </div>
+            </div>            
+            <!-- 마켓 이동 -->
         </div>
         <!-- right -->
     </div>    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.0/swiper-bundle.min.js"></script>
     <script type="text/javascript" src="./js/ui.js" ></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          spaceBetween: 0,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      </script>    
 </body>
 </html>
