@@ -84,14 +84,3 @@ tabButtons.forEach(button => {
     });
 });
 
-const calcTabWidth = () => {
-    let totalWidth = 0;
-    const children = tabList.children;
-    for (const li of children) {
-        const liStyle = getComputedStyle(li);
-        totalWidth += li.offsetWidth + parseFloat(liStyle.marginLeft) + parseFloat(liStyle.marginRight);
-    }
-    tabList.style.width = totalWidth + 58 + 'px';
-}
-
-window.addEventListener('load', calcTabWidth);
