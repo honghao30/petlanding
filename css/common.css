@@ -14,6 +14,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
 .left-sect .footer .button-area a {display: block;text-align: center;width: 106px;height: 21px;background-color: #fff;border-radius: 7px;font-size: 12px;color:#222;}
 .pc-img {display: block;}
 .mo-img {display: none;}
+.tablet-img {display: none}
 
 .right-frame {width: 100%;max-width: 500px;height: 100%;background-color: #fff;box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 8px;position: relative;}
 .right-frame .title-Wrap {width: 100%;height: 56px;background-color: #4783f5;position: relative;}
@@ -43,15 +44,13 @@ html, body {background-color: #CFEDFF;width: 100%;}
 .fillter-option .option-list.is-active {display: block;}
 .story-list-wrap {padding: 0 28px;overflow-y: auto;  height: calc(100% - 50px);overflow: auto;}
 .story-list {display: flex;flex-direction: column;gap: 12px;}
-.item-wrap {position: relative;width: 100%;color:#fff;border-radius: 20px;height: 255px;overflow: hidden;}
-.item-wrap.no-img::before {display: none;}
-.item-wrap.no-img {background: #b6babd url('../image/no-img.svg') no-repeat center 40px;}
-.item-wrap::before {content: '';display: block;position: absolute;left:0;top:0;right:0;bottom:0;background-color: rgba(0, 0, 0, 0.3);}
-.item-wrap .thum-img {width: 100%;height: 100%;}
-.item-wrap img {width: 100%;height: 100%;}
+.story-list li {padding: 0;margin: 0;}
+.item-wrap {position: relative;width: 100%;color:#fff;}
+.item-wrap::before {content: '';display: block;position: absolute;border-radius: 20px;left:0;top:0;right:0;bottom:3px;background-color: rgba(0, 0, 0, 0.3);}
+.item-wrap img {width: 100%;border-radius: 20px;}
 .item-wrap .util-area {position: absolute;right:24px;top:24px;z-index: 10;}
-.item-wrap .util-area .like {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_like.svg') no-repeat left center;padding-left: 22px;}
-.item-wrap .util-area .command {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_command.svg') no-repeat left center;padding-left: 22px;margin-left:14px;}
+.item-wrap .util-area .like {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_like.svg') no-repeat left center;padding-left: 25px;}
+.item-wrap .util-area .command {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_command_wt.svg') no-repeat left center;padding-left: 24px;margin-left:14px;}
 .item-wrap .item-infor {position: absolute;right:24px;bottom:24px;z-index: 10;left: 24px;}
 .item-wrap .item-infor a {display: block;font-size: 24px;font-weight: 500;line-height: 26px;text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
 .item-wrap .item-infor a:hover {text-decoration: underline;}
@@ -119,12 +118,16 @@ html, body {background-color: #CFEDFF;width: 100%;}
 
 @media (max-width: 1023px) {
     .wrap {width:100%;max-width: 100%;height:auto;flex-direction: column;justify-content: center;}
-    .left-sect {height: 100vh;align-items: center; padding: 15% 0 10%;justify-content: space-between;}
+    .left-sect {height: 100vh;align-items: center; padding: 10% 0;justify-content: space-between;}
     .left-sect .footer {text-align: center;}
     .left-sect .footer .button-area {position:relative;top:auto;right: auto; flex-direction: row;justify-content: center; height: auto;gap: 14px;margin-top: 12px;}
-    .btn-arrow-down {cursor: default; display: block;text-align:center;position: relative; width:75px;height:46px;font-size: 19px;color:#80ABFF;font-weight: 500;margin:0 auto;}
+    .btn-arrow-down {cursor: default; display: block;text-align:center;position: relative; width:75px;height:46px;font-size: 19px;color:#80ABFF;font-weight: 500;margin:5% auto 0;}
     .btn-arrow-down::after {content: '';margin-top:5px;width: 25px;height:18px;display:inline-block; background-image: url('../image/icon-arrow-down.svg');background-position: center;background-size: 25px auto;animation: moveUpDown 1s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);}
     .right-frame {margin: 0 auto;height: 100vh;}
+    .pc-img {display: none;}
+    .mo-img {display: none;}
+    .tablet-img {display: block;}
+    .modal-wrap {position: fixed;}
     @keyframes moveUpDown {
         0% {
             margin-top: 5px;
@@ -142,6 +145,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
     .left-sect .main-img img {width: 100%;max-width: 80%;}
     .pc-img {display: none;}
     .mo-img {display: block;}
+    .tablet-img {display: none}
     .left-sect .footer {margin-top:16px;font-size: 10px;line-height: 16px;}
     .left-sect .footer a {line-height: 20px;font-size: 10px;}
     .btn-arrow-down {margin-top: 4%;}
@@ -154,11 +158,24 @@ html, body {background-color: #CFEDFF;width: 100%;}
     .tab-area ul li button {font-size: 12px;height: 28px;}
     .fillter-option {margin-top: 16px;}
     .fillter-option .selected-option {height:32px;min-width: 56px;font-size: 12px;margin-left: 16px;}
+    .fillter-option .option-list {left:16px;padding: 8px;}
+    .fillter-option .option-list li button {font-size: 12px;padding: 6px 0;width: 80px;}
     .tab-cont {height: calc(100% - 116px);}
     .story-list-wrap {padding: 0 16px;height: 100%;}
     .item-wrap {height: auto;}
     .item-wrap .item-infor {right:16px;bottom:12px;left: 16px;}
     .item-wrap .item-infor a {font-size: 16px;line-height: 19px;}
+    
+    .page-location-area {padding: 18px;gap:5px;}
+    .page-location-area .btn-back {width: 20px;height: 20px;background: url('../image/go-back.svg') no-repeat center;background-size: 20px auto;}
+    .page-location-area p {font-size:16px;}
+    .article-title-area {padding: 10px 16px 16px;}
+    .article-title-area h2 {font-size: 20px;line-height: 24px;}
+    .article-info {padding: 0 16px;}
+    .article-cont {padding: 32px 0px;font-size:16px;line-height: 24px;margin:0 16px;}
+    .command-area {padding: 26px 16px;}
+    .command-inner-wrap .commond-cont .command {font-size:16px;line-height: 24px;}
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:0 !important;}
 }
 
 @media (max-width: 540px) {  
