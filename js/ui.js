@@ -25,18 +25,20 @@ document.addEventListener("click", function(e) {
     }
 });
 
-// 댓글 
-const commonButton = document.querySelector('.btn-write-commond');
-commonButton && commonButton.addEventListener('click', (e) => {
-    e.stopPropagation(); // 이벤트 버블링을 막음
-    document.querySelector('.market-alert').classList.add('is-active');
+// 모달 
+const alertOpeners = document.querySelectorAll('.alert-open');
+alertOpeners.forEach(opener => {
+    opener.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.querySelector('.market-alert').classList.add('is-active');
+    });
 });
 
 // 드랍다운
 const selectedOptionButton = document.querySelector('.selected-option');
 const optionList = document.querySelectorAll('.option-list li button');
 
-selectedOptionButton.addEventListener('click', function() {    
+selectedOptionButton && selectedOptionButton.addEventListener('click', function() {    
     selectedOptionButton.classList.toggle('is-active');
     selectedOptionButton.parentElement.classList.toggle('is-active');
     selectedOptionButton.nextElementSibling.classList.toggle('is-active');    

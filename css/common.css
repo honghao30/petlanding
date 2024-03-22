@@ -58,7 +58,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
 .item-wrap .item-infor .label-area span {border:1px solid #fff;padding: 2px 8px;font-weight: 300;border-radius: 7px; color:#fff;font-size:16px;}
 
 .no-data-img {height: 666px;display: flex;align-items: center;justify-content: center;background: url(../image/no-img.svg) no-repeat center center;}
-.content_wrap {height: calc(100% - 60px);overflow-y: auto;}
+.content_wrap {height: calc(100% - 137px);overflow-y: auto;}
 .page-location-area {padding: 24px 28px;display: flex;align-items: center;gap:5px;}
 .page-location-area .btn-back {width: 44px;height: 20px;background: url('../image/go-back.svg') no-repeat center;}
 .page-location-area p {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;font-size:24px;color:#222;}
