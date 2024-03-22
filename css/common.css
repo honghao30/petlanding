@@ -65,7 +65,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 .page-location-area p {text-overflow: ellipsis; white-space: nowrap; overflow: hidden;font-size:24px;color:#222;}
 .article-title-area {display: flex;flex-direction: column;padding: 10px 28px 16px;gap:12px;}
 .article-title-area .label-top {display: flex;gap: 6px;}
-.article-title-area .label-top span {width: 44px;height: 28px; background-color: #7DAAFF;font-size: 16px;font-weight: 500;border-radius: 8px;text-align: center;color:#fff;line-height: 28px;}
+.article-title-area .label-top span {min-width: 44px;height: 28px; background-color: #7DAAFF;font-size: 16px;font-weight: 500;border-radius: 8px;text-align: center;color:#fff;line-height: 28px;}
 .article-title-area h2 {font-size: 32px;font-weight: 700;line-height: 37px;}
 .article-info {padding: 0 28px;display: flex;justify-content: space-between;}
 .article-info .like {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_like.svg') no-repeat left center;padding-left: 22px;}
@@ -172,15 +172,20 @@ body.modal-open {height: 100%;overflow: hidden;}
     .page-location-area {padding: 18px;gap:5px;}
     .page-location-area .btn-back {width: 20px;height: 20px;background: url('../image/go-back.svg') no-repeat center;background-size: 20px auto;}
     .page-location-area p {font-size:16px;}
-    .article-title-area {padding: 10px 16px 16px;}
+    .article-title-area {padding: 8px 16px 16px;}
     .article-title-area h2 {font-size: 20px;line-height: 24px;}
     .article-info {padding: 0 16px;}
     .article-cont {padding: 32px 0px;font-size:16px;line-height: 24px;margin:0 16px;}
+    .content_wrap {height: calc(100% - 90px);}
     .command-area {padding: 26px 16px;}
     .command-inner-wrap .commond-cont .command {font-size:16px;line-height: 24px;}
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:0 !important;}
     .modal-wrap .nobg-layer ul {gap: 28px;}
     .modal-wrap .nobg-layer ul li img {width:56px;}
+    .article-title-area .label-top {gap:3px;}
+    .article-title-area .label-top span {min-width: 32px;height: 20px;font-size: 12px;line-height: 20px;}
+    .hash-tag {margin-top: 30px;}
+    .hash-tag a {padding: 0 6px;height: 28px;font-size: 12px;line-height: 28px;}
 }
 
 @media (max-width: 540px) {  
