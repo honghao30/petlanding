@@ -90,3 +90,8 @@ tabButtons.forEach(button => {
     });
 });
 
+// 공지팝업
+const closeNotice = document.querySelector('.btn-close-popup button')
+closeNotice.addEventListener('click', () => {
+    document.querySelector('.popupModal').style.display = 'none';
+});

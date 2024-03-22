@@ -119,6 +119,40 @@ body.modal-open {height: 100%;overflow: hidden;}
 .alert-wrap-inner .button-area {display: flex;gap: 18px;}
 .alert-wrap .btn-close-alert {width:39px;height:39px;position: absolute;right:10px;top:10px;background: url('../image/btn-close-x-bl.svg') no-repeat center;}
 
+/* 팝업 */
+.popupModal {width:100%;max-width: 620px;left: 50%;top:50%;transform: translate(-50%,-50%); position:fixed;z-index:11;}
+.popupModal .popup-inner {border-radius: 20px;width: 100%;height: 100%;overflow: hidden;background:#EF7086;}
+.popupModal .popup-inner .close-wrap {height: 72px;background-color: #FFF3C9;display: flex;align-items: center;justify-content: space-between;padding: 0 21px;}
+
+/* checkbox */
+.checkbox-wrap {display: flex;align-items: center;}
+.btn-close-popup button {font-size: 24px;color:#333333;font-weight: 500;}
+.checkbox input[type="checkbox"]{display: none;}
+.checkbox input[type="checkbox"] + label{
+    display: inline-block;    
+    position: relative;
+    padding-left: 45px;
+    font-size:24px;
+    color:#666666;
+}
+.checkbox input[type="checkbox"] + label::after {
+    content:'';
+    font-size: 0px;
+    width: 36px;
+    height: 36px;
+    background: #E85473;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top:-4px;
+} 
+.checkbox input[id="chk-pop"]:checked + label::after{
+    content:''; 
+    background: #E85473 url('../image/icon-checkbox-check.svg') no-repeat center center;
+    color:#fff;
+}
+
 @media (max-width: 1023px) {
     .wrap {width:100%;max-width: 100%;height:auto;flex-direction: column;justify-content: center;}
     .left-sect {height: 100vh;align-items: center; padding: 10% 0;justify-content: space-between;}
@@ -186,6 +220,29 @@ body.modal-open {height: 100%;overflow: hidden;}
     .article-title-area .label-top span {min-width: 32px;height: 20px;font-size: 12px;line-height: 20px;}
     .hash-tag {margin-top: 30px;}
     .hash-tag a {padding: 0 6px;height: 28px;font-size: 12px;line-height: 28px;}
+
+
+    /* 팝업 */
+    .popupModal {max-width: 90%;}    
+    .popupModal .popup-inner .close-wrap {height: 40px;background-color: #FFF3C9;display: flex;align-items: center;justify-content: space-between;padding: 0 21px;}
+    .popupModal .popup-cont img {width: 100%;max-width: 100%;}
+
+    .btn-close-popup button {font-size: 16px;}    
+    .checkbox input[type="checkbox"] + label{        
+        padding-left: 25px;
+        font-size:16px;        
+    }
+    .checkbox input[type="checkbox"] + label::after {
+        content:'';
+        width: 16px;
+        height: 16px;        
+        top:0px;
+    } 
+    .checkbox input[id="chk-pop"]:checked + label::after{
+        content:''; 
+        background: #E85473 url('../image/icon-checkbox-check.svg') no-repeat center center;
+        background-size: 15px auto;
+    }    
 }
 
 @media (max-width: 540px) {  
