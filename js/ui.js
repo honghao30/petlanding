@@ -9,6 +9,7 @@ toggleBtns.forEach(btn => {
 const snsShare = () => {
     const modalLayer = document.querySelector('.sns-share');
     modalLayer.classList.add('is-active');
+    document.body.classList.add('modal-open');
 }
 
 // 모달 닫기
@@ -16,12 +17,14 @@ const closeButtons = document.querySelectorAll('.modal-close');
 closeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         btn.closest('.modal-wrap').classList.remove('is-active');
+        document.body.classList.remove('modal-open');
     });
 })
 
 document.addEventListener("click", function(e) {
     if (document.querySelector('.market-alert.is-active') && !e.target.closest('.alert-wrap-inner')) {
         document.querySelector('.market-alert.is-active').classList.remove('is-active');
+        document.body.classList.remove('modal-open');
     }
 });
 
@@ -30,6 +33,7 @@ const alertOpeners = document.querySelectorAll('.alert-open');
 alertOpeners.forEach(opener => {
     opener.addEventListener('click', (e) => {
         e.stopPropagation();
+        document.body.classList.add('modal-open');
         document.querySelector('.market-alert').classList.add('is-active');
     });
 });

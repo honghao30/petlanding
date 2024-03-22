@@ -5,6 +5,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
     html, body {height:100%;overflow: hidden;} 
     .btn-arrow-down {display: none;}
 }
+body.modal-open {height: 100%;overflow: hidden;}
 .wrap {width:100%;max-width: 1066px;height:100%;margin: 0 auto;display: flex;justify-content: space-between;}
 .left-sect {display: flex;flex-direction: column; padding-top: 83px;}
 .left-sect .logo {text-align: center;}
@@ -105,7 +106,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
 .btn-write-commond img {width: 100%;}
 
 /* 모달 */
-.modal-wrap {width: 100%;height: 100%;position: absolute;left:0;top:0;background-color: rgba(0, 0, 0, 0.5);display: none;z-index: 10;}
+.modal-wrap {width: 100%;height: 100%;position: absolute;left:0;top:0;background-color: rgba(0, 0, 0, 0.4);display: none;z-index: 10;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);}
 .modal-wrap.is-active {display: block;}
 .modal-wrap .nobg-layer {width: 100%;height: 100%;position: relative;}
 .modal-wrap .nobg-layer ul {width: 100%;height: 100%;display: flex;flex-direction: column; align-items: center;justify-content: center;gap: 44px;}
@@ -125,7 +126,7 @@ html, body {background-color: #CFEDFF;width: 100%;}
     .left-sect .footer .button-area {position:relative;top:auto;right: auto; flex-direction: row;justify-content: center; height: auto;gap: 14px;margin-top: 12px;}
     .btn-arrow-down {cursor: default; display: block;text-align:center;position: relative; width:75px;height:46px;font-size: 19px;color:#80ABFF;font-weight: 500;margin:5% auto 0;}
     .btn-arrow-down::after {content: '';margin-top:5px;width: 25px;height:18px;display:inline-block; background-image: url('../image/icon-arrow-down.svg');background-position: center;background-size: 25px auto;animation: moveUpDown 1s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);}
-    .right-frame {margin: 0 auto;height: 100vh;}
+    .right-frame {margin: 0 auto;height: 100vh;overflow: hidden;}
     .pc-img {display: none;}
     .mo-img {display: none;}
     .tablet-img {display: block;}
@@ -178,6 +179,8 @@ html, body {background-color: #CFEDFF;width: 100%;}
     .command-area {padding: 26px 16px;}
     .command-inner-wrap .commond-cont .command {font-size:16px;line-height: 24px;}
     .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {bottom:0 !important;}
+    .modal-wrap .nobg-layer ul {gap: 28px;}
+    .modal-wrap .nobg-layer ul li img {width:56px;}
 }
 
 @media (max-width: 540px) {  
