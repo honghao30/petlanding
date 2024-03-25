@@ -218,14 +218,18 @@ body.modal-open {height: 100%;overflow: hidden;}
     .right-frame .title-Wrap .btn-share {width:19px;height:18px;background-size: 19px auto;}
     .right-frame .cate-title {font-size: 20px;padding: 14px 0;}
     .tab-area {padding: 0 16px;}
-    .tab-area ul {gap: 10px;}
-    .tab-area ul li button {font-size: 20px;height: 44px;padding:0 20px;border-radius: 10px;}
-    .fillter-option {margin-top: 16px;}
+    .tab-area ul {gap: 6px;}
+    .tab-area ul li button {font-size: 12px;height: 28px;padding:0 14px;border-radius: 10px;}
+    .fillter-option {margin-top: 10px;}
     .fillter-option .selected-option {height:32px;min-width: 56px;font-size: 12px;margin-left: 16px;}
     .fillter-option .option-list {left:16px;padding: 8px;}
+    .fillter-option .option-list li+li {margin-top: 8px;}
     .fillter-option .option-list li button {font-size: 12px;padding: 6px 0;width: 80px;}
     .tab-cont {height: calc(100% - 136px);}
     .story-list-wrap {padding: 0 16px;}
+    .story-list {gap: 8px;}
+    .item-wrap img {border-radius: 12px;}
+    .item-wrap::before {border-radius: 12px;}
     .item-wrap {height: auto;}
     .item-wrap .item-infor {right:16px;bottom:16px;left: 16px;}    
     .item-wrap .item-infor .label-area {margin-top: 12px;}
