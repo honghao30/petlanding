@@ -92,6 +92,23 @@ tabButtons.forEach(button => {
 
 // 공지팝업
 const closeNotice = document.querySelector('.btn-close-popup button')
-closeNotice.addEventListener('click', () => {
+closeNotice && closeNotice.addEventListener('click', () => {
     document.querySelector('.popupModal').style.display = 'none';
 });
+
+//상세 
+const listTrigger = document.querySelectorAll('.story-list li a');
+listTrigger.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const listId = trigger.getAttribute('data-id');
+        document.querySelector('.detail-section').style.display = 'block';
+        document.querySelector('.detail-section').setAttribute('data-id', listId);
+    });
+});
+
+//상세 닫기
+const detailClose = document.querySelector('.btn-back');
+detailClose.addEventListener('click', () => {
+    document.querySelector('.detail-section').style.display = ""
+})
