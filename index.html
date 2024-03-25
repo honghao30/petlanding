@@ -10,7 +10,7 @@
 </head>
 <body>
     <!--팝업-->
-    <div class="popupModal">
+    <!-- <div class="popupModal">
         <div class="popup-inner">
             <div class="popup-cont">
                 <img src="./image/notice_pop.png" alt="" />
@@ -25,11 +25,11 @@
                     </span>
                 </div>
                 <div class="btn-close-popup">
-                    <button type="button">닫기</button>
+                    <button type="button" class="btn_close">닫기</button>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--//팝업-->
     <div class="wrap">
         <div class="left-sect">
@@ -39,6 +39,22 @@
                 </h1>
             </div>
             <div class="main-img">
+                <div class="qr-box">
+                    <dl>
+                        <dt>
+                            <img src="./image/qr-tit.png" class="pc-only" alt="" /> 
+                            <img src="./image/qr-tit-m.png" class="mo-only" alt="" />
+                        </dt>
+                        <dd>
+                            <img src="./image/qr-google.png"  class="pc-only"  alt="구글마켓" />
+                            <img src="./image/qr-google_m.png" class="mo-only"  alt="구글마켓" />
+                        </dd>
+                        <dd>
+                            <img src="./image/qr-apple.png"  class="pc-only"  alt="앱스토어" />
+                            <img src="./image/qr-apple_m.png" class="mo-only"  alt="앱스토어" />
+                        </dd>
+                    </dl>
+                </div>
                 <img src="./image/main_img.png" class="pc-img" alt="가족, 지인과 함께 하는 공동육아, 산책으로 건강한 우리아이">
                 <img src="./image/main_img_tablet.png" class="tablet-img" alt="가족, 지인과 함께 하는 공동육아, 산책으로 건강한 우리아이">
                 <img src="./image/main_img_m.png" class="mo-img" alt="가족, 지인과 함께 하는 공동육아, 산책으로 건강한 우리아이">
@@ -59,12 +75,12 @@
                     <a href="#">개인정보 처리방침</a>
                 </div>
             </div>      
-            <button class="btn-arrow-down" type="button">
+            <a href="#right-frame" class="btn-arrow-down">
                 SCROLL
-            </button> 
+            </a> 
         </div>
         <!-- left -->
-        <div class="right-frame">
+        <div class="right-frame" id="right-frame">
             <div class="title-Wrap">
                 <h2><img src="./image/pettip_h2.svg" alt="PetTip" /></h2>
                 <button class="btn-share" onclick="snsShare()">
@@ -243,7 +259,7 @@
                         </div>
                         상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.상세내용이 출력 됩니다.
                         <div class="hash-tag">
-                            <a href="#">해시태그1</a><a href="#">해시태그2</a><a href="#">해시태그3</a><a href="#">해시태그4</a>
+                            <span>해시태그1</span><span>해시태그2</span><span>해시태그3</span><span>해시태그4</span>
                         </div>
                     </div> 
                     <div class="command-area">

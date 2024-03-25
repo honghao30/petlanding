@@ -91,9 +91,48 @@ tabButtons.forEach(button => {
 });
 
 // 공지팝업
-const closeNotice = document.querySelector('.btn-close-popup button')
-closeNotice && closeNotice.addEventListener('click', () => {
-    document.querySelector('.popupModal').style.display = 'none';
+const toggleMainPopup = () => {
+    const handleCookie = {
+        setCookie: (name, val, exp) => {
+            const date = new Date();
+            date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+            document.cookie = name + "=" + val + ";expires=" + date.toUTCString() + ";";
+        },
+        getCookie: (name) => {
+            const value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+            return value ? value[2] : null;
+        }
+    };
+    
+    if (handleCookie.getCookie("today") == "y") {
+        document.querySelector(".popupModal").classList.remove("is-active");
+    } else {
+        document.querySelector(".popupModal").classList.add("is-active");
+    }
+
+    const todayChk = document.getElementById("chk-pop");
+    todayChk.addEventListener('change', () => {
+        if (todayChk.checked) {        
+            handleCookie.setCookie("today", "y", 1);
+        } else {        
+            handleCookie.setCookie("today", "", -1);
+        }
+    });
+
+    const noticePopupClose = document.querySelector(".btn-close-popup .btn_close");
+    noticePopupClose.addEventListener("click", () => {
+        const popupModal = noticePopupClose.closest(".popupModal.is-active");
+        if (popupModal && !todayChk.checked) {
+            handleCookie.setCookie("today", "y", 1);
+        }
+        if (popupModal) {
+            popupModal.classList.remove("is-active");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    toggleMainPopup();
 });
 
 //상세 
@@ -109,6 +148,13 @@ listTrigger.forEach(trigger => {
 
 //상세 닫기
 const detailClose = document.querySelector('.btn-back');
-detailClose.addEventListener('click', () => {
-    document.querySelector('.detail-section').style.display = ""
+detailClose && detailClose.addEventListener('click', () => {
+    document.querySelector('.detail-section').style.display = "";
 })
+
+// 스크롤 탑
+document.querySelector('.btn-arrow-down').addEventListener('click', function(e) {
+    e.preventDefault();
+    const id = this.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+});
