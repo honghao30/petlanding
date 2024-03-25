@@ -26,7 +26,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 .tab-area {width: auto;overflow-x: scroll;padding: 0 28px;}
 .tab-area ul {display: flex;gap: 3px;white-space: nowrap;}
 .tab-area ul li.is-active button {background-color: #4783F5;color:#fff;border:1px solid #4783F5;}
-.tab-area ul li button {display: block;white-space: nowrap;padding: 0 11px;height: 44px;text-align: center;border:1px solid #EBEFF4;border-radius: 7px;font-size: 18px;font-weight: 500;;}
+.tab-area ul li button {display: block;white-space: nowrap;padding: 0 11px;height: 44px;text-align: center;border:1px solid #EBEFF4;border-radius: 12px;font-size: 18px;font-weight: 500;;}
 .tab-area {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -115,7 +115,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 .modal-wrap.is-active {display: block;}
 .modal-wrap .nobg-layer {width: 100%;height: 100%;position: relative;}
 .modal-wrap .nobg-layer ul {width: 100%;height: 100%;display: flex;flex-direction: column; align-items: center;justify-content: center;gap: 44px;}
-.modal-wrap .nobg-layer .btn-close {width:23px;height:23px;position: absolute;right:17px;top:17px;background: url('../image/btn-close-wt.svg') no-repeat;}
+.modal-wrap .nobg-layer .btn-close {width:23px;height:23px;position: absolute;right:17px;top:17px;background: url('../image/btn-close-wt.svg') no-repeat center;}
 
 .alert-wrap {width: 361px;height: 276px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);background-color: #fff;border-radius: 24px;box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);}
 .alert-wrap-inner {width: 100%;height: 100%;display: flex;flex-direction: column;align-items:center;justify-content: center;padding-top: 50px;}
@@ -131,7 +131,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 
 /* checkbox */
 .checkbox-wrap {display: flex;align-items: center;}
-.btn-close-popup button {font-size: 24px;color:#333333;font-weight: 500;}
+.btn-close-popup button {font-size: 24px;color:#333333;font-weight: 700;}
 .checkbox input[type="checkbox"]{display: none;}
 .checkbox input[type="checkbox"] + label{
     display: inline-block;    
@@ -139,13 +139,15 @@ body.modal-open {height: 100%;overflow: hidden;}
     padding-left: 45px;
     font-size:24px;
     color:#666666;
+    font-family: 'Pretendard', 'Malgun Gothic', '맑은고딕', sans-serif;
 }
 .checkbox input[type="checkbox"] + label::after {
     content:'';
     font-size: 0px;
     width: 36px;
     height: 36px;
-    background: #E85473;
+    background: #fff url('../image/icon-checkbox.svg') no-repeat center center;
+    border: 1px solid #666666;   
     border-radius: 50%;
     text-align: center;
     position: absolute;
@@ -155,17 +157,19 @@ body.modal-open {height: 100%;overflow: hidden;}
 .checkbox input[id="chk-pop"]:checked + label::after{
     content:''; 
     background: #E85473 url('../image/icon-checkbox-check.svg') no-repeat center center;
+    border: 1px solid #E85473;
     color:#fff;
 }
 
 @media (max-width: 1023px) {
     .wrap {width:100%;max-width: 100%;height:auto;flex-direction: column;justify-content: center;}
-    .left-sect {height: 100vh;align-items: center; padding: 10% 0;justify-content: space-between;}
+    .left-sect {align-items: center; padding: 10% 0;justify-content: space-between;}
     .left-sect .footer {text-align: center;}
     .left-sect .footer .button-area {position:relative;top:auto;right: auto; flex-direction: row;justify-content: center; height: auto;gap: 14px;margin-top: 12px;}
     .btn-arrow-down {cursor: default; display: block;text-align:center;position: relative; width:75px;height:46px;font-size: 19px;color:#80ABFF;font-weight: 500;margin:5% auto 0;}
     .btn-arrow-down::after {content: '';margin-top:5px;width: 25px;height:18px;display:inline-block; background-image: url('../image/icon-arrow-down.svg');background-position: center;background-size: 25px auto;animation: moveUpDown 1s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);}
     .right-frame {margin: 0 auto;height: 100vh;overflow: hidden;}
+    .tab-area ul li button {border-radius: 15px;}
     .pc-img {display: none;}
     .mo-img {display: none;}
     .tablet-img {display: block;}
@@ -188,22 +192,21 @@ body.modal-open {height: 100%;overflow: hidden;}
     .pc-img {display: none;}
     .mo-img {display: block;}
     .tablet-img {display: none}
-    .left-sect .footer {margin-top:16px;font-size: 10px;line-height: 16px;}
-    .left-sect .footer a {line-height: 20px;font-size: 10px;}
-    .btn-arrow-down {margin-top: 4%;}
+    .btn-arrow-down {margin-top: 2;}
 
     .right-frame .title-Wrap {height: 32px;}
     .right-frame .title-Wrap h2 img {width: 56px;}
     .right-frame .title-Wrap .btn-share {width:19px;height:18px;background-size: 19px auto;}
     .right-frame .cate-title {font-size: 20px;padding: 14px 0;}
     .tab-area {padding: 0 16px;}
-    .tab-area ul li button {font-size: 12px;height: 28px;}
+    .tab-area ul {gap: 10px;}
+    .tab-area ul li button {font-size: 20px;height: 44px;padding:0 20px;border-radius: 10px;}
     .fillter-option {margin-top: 16px;}
     .fillter-option .selected-option {height:32px;min-width: 56px;font-size: 12px;margin-left: 16px;}
     .fillter-option .option-list {left:16px;padding: 8px;}
     .fillter-option .option-list li button {font-size: 12px;padding: 6px 0;width: 80px;}
     .tab-cont {height: calc(100% - 136px);}
-    .story-list-wrap {padding: 0 16px;height: 100%;}
+    .story-list-wrap {padding: 0 16px;}
     .item-wrap {height: auto;}
     .item-wrap .item-infor {right:16px;bottom:12px;left: 16px;}
     .item-wrap .item-infor a {font-size: 16px;line-height: 19px;}
@@ -226,6 +229,12 @@ body.modal-open {height: 100%;overflow: hidden;}
     .hash-tag {margin-top: 30px;}
     .hash-tag a {padding: 0 6px;height: 28px;font-size: 12px;line-height: 28px;}
 
+    .left-sect .footer {margin-top:16px;font-size: 10px;line-height: 16px;flex-direction: column; justify-content: center;}
+    .left-sect .footer .button-area {flex-direction: row;justify-content: center;gap: 5px;}
+    .left-sect .footer .button-area a {line-height: 20px;font-size: 10px;}
+    
+    .btn-wrap-more {padding: 16px 0;}
+    .btn-wrap-more img {width: 33px;height:33px;}
 
     /* 팝업 */
     .popupModal {max-width: 90%;}    
@@ -238,9 +247,9 @@ body.modal-open {height: 100%;overflow: hidden;}
         font-size:16px;        
     }
     .checkbox input[type="checkbox"] + label::after {
-        content:'';
+        content:'';        
         width: 16px;
-        height: 16px;        
+        height: 16px;     
         top:0px;
     } 
     .checkbox input[id="chk-pop"]:checked + label::after{
