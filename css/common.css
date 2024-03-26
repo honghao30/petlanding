@@ -1,13 +1,13 @@
 @import url(./base.css);
 
 html, body {background-color: #CFEDFF;width: 100%;}
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     html, body {height:100%;overflow: hidden;max-height: 920px;} 
     .btn-arrow-down {display: none;}
 }
 body.modal-open {height: 100%;overflow: hidden;}
 .wrap {width:100%;max-width: 1066px;height:100%;margin: 0 auto;display: flex;justify-content: space-between;}
-.left-sect {display: flex;flex-direction: column; padding-top: 83px;}
+.left-sect {display: flex;flex-direction: column; padding-top: 60px;}
 .left-sect .logo {text-align: center;}
 .left-sect .main-img {position: relative; margin-top: 22px;}
 .left-sect .main-img .qr-box {position: absolute;right:37px;bottom:56px;width: 86px;padding:8px 0;gap: 8px; border: 1px solid #fff;border-radius: 16px;display: flex;align-items: center;justify-content: center;}
@@ -169,7 +169,7 @@ body.modal-open {height: 100%;overflow: hidden;}
     color:#fff;
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
     .wrap {width:100%;max-width: 100%;height:auto;flex-direction: column;justify-content: center;}
     .left-sect {align-items: center; padding: 88px 0 0;justify-content: space-between;}
     .btn-arrow-down {display: block;text-align:center;position: relative; width:75px;height:46px;font-size: 19px;color:#80ABFF;font-weight: 500;margin:35px auto;}
@@ -179,15 +179,17 @@ body.modal-open {height: 100%;overflow: hidden;}
     .left-sect .footer .button-area {flex-direction: row;justify-content: center;gap: 15px;margin-top:12px;}
     .left-sect .footer .button-area a {line-height: 22px;font-size: 12px;height: 22px;padding: 0 12px;width: auto;}
     
-
     .right-frame {margin: 0 auto;height: 100vh;overflow: hidden;}
     .tab-area ul li button {border-radius: 15px;}
+    .fillter-option .option-list {top: 35px;}
     .pc-img {display: none;}
     .mo-img {display: none;}
     .tablet-img {display: block;width: 100%;max-width: none;height: 100%;max-height: 670px;}
     .left-sect .main-img .qr-box {right:41px;bottom:67px;width: 86px;padding:8px 0;}
 
     .modal-wrap {position: fixed;}
+    .popupModal {top: 20%;transform: translate(-50%, 0);}
+
     @keyframes moveUpDown {
         0% {
             margin-top: 5px;
@@ -223,7 +225,7 @@ body.modal-open {height: 100%;overflow: hidden;}
     .tab-area ul li button {font-size: 12px;height: 28px;padding:0 14px;border-radius: 10px;}
     .fillter-option {margin-top: 10px;}
     .fillter-option .selected-option {height:32px;min-width: 56px;font-size: 12px;margin-left: 16px;}
-    .fillter-option .option-list {left:16px;padding: 8px;}
+    .fillter-option .option-list {left:16px;padding: 8px;top: 31px;}
     .fillter-option .option-list li+li {margin-top: 8px;}
     .fillter-option .option-list li button {font-size: 12px;padding: 6px 0;width: 80px;}
     .tab-cont {height: calc(100% - 136px);}
