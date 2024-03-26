@@ -25,10 +25,10 @@ body.modal-open {height: 100%;overflow: hidden;}
 .right-frame .title-Wrap h2 {text-align: center;display: flex;align-items: center;justify-content: center;height: 100%;}
 .right-frame .title-Wrap .btn-share {width:30px;height:30px;background: url(../image/btn_share.svg) no-repeat center center;position: absolute;right: 14px;top: 50%;transform: translateY(-50%);}
 .right-frame .cate-title {padding: 21px 0;text-align: center;font-weight: 700;font-size:32px;color:#222;}
-.tab-area {width: auto;overflow-x: scroll;padding: 0 28px;}
-.tab-area ul {display: flex;gap: 3px;white-space: nowrap;}
+.tab-area {width: auto;overflow-x: scroll;margin: 0 28px;}
+.tab-area ul {display: flex;gap: 6px;white-space: nowrap;}
 .tab-area ul li.is-active button {background-color: #4783F5;color:#fff;border:1px solid #4783F5;}
-.tab-area ul li button {display: block;white-space: nowrap;padding: 0 11px;height: 44px;text-align: center;border:1px solid #EBEFF4;border-radius: 12px;font-size: 18px;font-weight: 500;;}
+.tab-area ul li button {display: block;white-space: nowrap;padding: 0 12px;height: 44px;text-align: center;border:1px solid #EBEFF4;border-radius: 12px;font-size: 18px;font-weight: 500;;}
 .tab-area {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
@@ -218,8 +218,8 @@ body.modal-open {height: 100%;overflow: hidden;}
     .right-frame .title-Wrap h2 img {width: 56px;}
     .right-frame .title-Wrap .btn-share {width:19px;height:18px;background-size: 19px auto;}
     .right-frame .cate-title {font-size: 20px;padding: 14px 0;}
-    .tab-area {padding: 0 16px;}
-    .tab-area ul {gap: 6px;}
+    .tab-area {margin: 0 16px;}
+    .tab-area ul {gap: 3px;}
     .tab-area ul li button {font-size: 12px;height: 28px;padding:0 14px;border-radius: 10px;}
     .fillter-option {margin-top: 10px;}
     .fillter-option .selected-option {height:32px;min-width: 56px;font-size: 12px;margin-left: 16px;}
