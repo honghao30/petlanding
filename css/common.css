@@ -232,9 +232,11 @@ body.modal-open {height: 100%;overflow: hidden;}
     .item-wrap::before {border-radius: 12px;}
     .item-wrap {height: auto;}
     .item-wrap .item-infor {right:16px;bottom:16px;left: 16px;}    
-    .item-wrap .item-infor .label-area {margin-top: 12px;}
+    .item-wrap .item-infor .label-area {margin-top: 12px;gap:5px;}
     .item-wrap .item-infor .tit {font-size:16px;line-height: 19px;}
-    .item-wrap .item-infor .label-area span {font-size:12px;height: 20px;line-height:20px;padding: 0 8px;}
+    .item-wrap .item-infor .label-area span {font-size:12px;height: 20px;line-height:18px;padding: 0 8px;}
+    .item-wrap .util-area .like {font-size:12px;margin-left:4px;background-size: 13px auto; padding-left: 18px;}
+    .item-wrap .util-area .command {font-size:12px;margin-left:4px;background-size: 13px auto;padding-left: 18px;}
     .item-wrap .util-area  {top: 16px;right: 16px;}
     .page-location-area {padding: 18px;gap:5px;}
     .page-location-area .btn-back {width: 20px;height: 20px;background-size: 13px auto;}
