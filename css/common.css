@@ -59,7 +59,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 .item-wrap .item-infor {position: absolute;right:24px;bottom:24px;z-index: 10;left: 24px;}
 .item-wrap .item-infor .tit {display: block;font-size: 24px;font-weight: 500;line-height: 26px;text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;}
 .item-wrap .item-infor .label-area {margin-top: 16px;display: flex;gap:8px;}
-.item-wrap .item-infor .label-area span {border:1px solid #fff;padding: 2px 8px;font-weight: 300;border-radius: 7px; color:#fff;font-size:16px;}
+.item-wrap .item-infor .label-area span {border:1px solid rgba(255,255,255,0.6);padding: 2px 8px;font-weight: 300;border-radius: 6px; color:#fff;font-size:16px;}
 
 .no-data-img {height: 666px;display: flex;align-items: center;justify-content: center;background: url(../image/no-img.svg) no-repeat center center;}
 .content_wrap {height: calc(100% - 137px);overflow-y: auto;}
