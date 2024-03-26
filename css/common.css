@@ -71,7 +71,7 @@ body.modal-open {height: 100%;overflow: hidden;}
 .article-title-area .label-top {display: flex;gap: 6px;}
 .article-title-area .label-top span {min-width: 44px;height: 28px; background-color: #7DAAFF;font-size: 16px;font-weight: 500;border-radius: 8px;text-align: center;color:#fff;line-height: 28px;}
 .article-title-area h2 {font-size: 32px;font-weight: 700;line-height: 37px;}
-.article-info {padding: 0 28px;display: flex;justify-content: space-between;}
+.article-info {padding: 0 28px;display: flex;align-items: center; justify-content: space-between;color:#737980;}
 .article-info .like {display: inline-block;font-size:16px;font-weight: 300;background: url('../image/icon_like.svg') no-repeat left center;padding-left: 22px;}
 .article-info .command {display: inline-block;width: 16px;font-size:16px;font-weight: 300;background: url('../image/icon_command.svg') no-repeat left center;padding-left: 22px;margin-left:14px;}
 .article-info .data {font-size:16px;color:#737980;}
@@ -245,7 +245,10 @@ body.modal-open {height: 100%;overflow: hidden;}
     .article-title-area {padding: 8px 16px 16px;}
     .article-title-area h2 {font-size: 20px;line-height: 24px;}
     .article-info {padding: 0 16px;}
-    .article-cont {padding: 32px 0px;font-size:16px;line-height: 24px;margin:0 16px;}
+    .article-info .like {font-size:12px;background-size: 11px auto;padding-left: 16px;}
+    .article-info .command {font-size:12px;background-size: 11px auto;padding-left: 16px;}
+    .article-info .data {font-size:12px;}
+    .article-cont {padding: 20px 0px;font-size:16px;line-height: 24px;margin:0 16px;}
     .content_wrap {height: calc(100% - 90px);}
     .command-area {padding: 26px 16px;}
     .command-inner-wrap .commond-cont .command {font-size:16px;line-height: 24px;}
@@ -253,13 +256,14 @@ body.modal-open {height: 100%;overflow: hidden;}
     .swiper-pagination-bullets.swiper-pagination-horizontal, 
     .swiper-pagination-custom, 
     .swiper-pagination-fraction {bottom:0 !important;}
+    .article-cont .image-area .swiper-pagination-bullet {width: 6px;height: 6px;margin: 0 4px !important;}
+    .article-cont .image-area {margin-bottom: 10px;}
     .modal-wrap .nobg-layer ul {gap: 28px;}
     .modal-wrap .nobg-layer ul li img {width:56px;}
     .article-title-area .label-top {gap:3px;}
     .article-title-area .label-top span {min-width: 32px;height: 20px;font-size: 12px;line-height: 20px;}
-    .hash-tag {margin-top: 30px;}
-    .hash-tag a {padding: 0 6px;height: 28px;font-size: 12px;line-height: 28px;}
-
+    .hash-tag {margin-top: 30px;}    
+    .hash-tag span {padding: 0 6px;height: 28px;font-size: 12px;line-height: 28px;}
     .left-sect .footer {margin-top:16px;font-size: 10px;line-height: 16px;flex-direction: column; justify-content: center;}
     .left-sect .footer .button-area {gap: 5px;}
     .left-sect .footer .button-area a {line-height: 21px;font-size: 10px;}
