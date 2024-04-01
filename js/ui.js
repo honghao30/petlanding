@@ -159,3 +159,15 @@ document.querySelector('.btn-arrow-down').addEventListener('click', function(e) 
     const id = this.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
 });
+
+// 이미지 높이 계산
+const calcHeight = () => {
+    const itemWraps = document.querySelectorAll('.item-wrap');
+    itemWraps.forEach(img => {
+        const contHeight = img.clientWidth * 0.56;
+        img.style.height = contHeight + 'px';
+        console.log(contHeight);
+    });
+}
+calcHeight();
+window.addEventListener('resize', calcHeight);
