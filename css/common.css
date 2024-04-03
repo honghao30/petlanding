@@ -239,7 +239,7 @@ body.modal-open {height: 100%;overflow: hidden;}
     .left-sect .main-img .maket-button a {height: 28px;gap: 3px;border-radius: 16px;width: 100px;font-size: 9px;line-height: 9px;}
     .left-sect .main-img .maket-button a.google::before {width:19px;height:28px;}
     .left-sect .main-img .maket-button a.appstore::before {width:13px;height:17px;}
-
+    .left-sect .footer .button-area {width: 100%;}
 
     .right-frame .title-Wrap {height: 32px;}
     .right-frame .title-Wrap h2 img {width: 56px;}
@@ -329,8 +329,7 @@ body.modal-open {height: 100%;overflow: hidden;}
     }    
 }
 
-@media (max-width: 320px) {   
-    .left-sect .footer .button-area {width: 100%;}
+@media (max-width: 320px) {       
     .left-sect .footer .button-area a {padding: 0 7px;}
     .checkbox input[type="checkbox"] + label {font-size: 13px;}
     .btn-close-popup button {font-size: 13px;}
