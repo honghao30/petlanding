@@ -140,9 +140,16 @@ document.addEventListener("DOMContentLoaded", () => {
 const listTrigger = document.querySelectorAll('.story-list li a');
 listTrigger.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
         const listId = trigger.getAttribute('data-id');
         document.querySelector('.detail-section').style.display = 'block';
+        const SlideImgs = document.querySelectorAll('.detail-section  .swiper-slide');
+        console.log(SlideImgs)
+        SlideImgs.forEach(Img => {
+            const frameWd = Math.floor(Img.clientWidth * 0.56);
+            console.log(frameWd)
+            Img.parentElement.style.height = frameWd + 'px';
+        });  
         document.querySelector('.detail-section').setAttribute('data-id', listId);
     });
 });
@@ -166,7 +173,6 @@ const calcHeight = () => {
     itemWraps.forEach(img => {
         const contHeight = img.clientWidth * 0.56;
         img.style.height = contHeight + 'px';
-        console.log(contHeight);
     });
 }
 calcHeight();
