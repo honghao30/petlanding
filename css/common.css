@@ -305,7 +305,10 @@ body.modal-open {height: 100%;overflow: hidden;}
     .popupModal {max-width: 90%;}    
     .popupModal .popup-inner .close-wrap {height: 40px;background-color: #FFF3C9;display: flex;align-items: center;justify-content: space-between;padding: 0 21px;}
     .popupModal .popup-cont img {width: 100%;max-width: 100%;}
-    .alert-wrap {max-width: 90%;}
+    .alert-wrap {width: calc(100% - 86px);height: auto;border-radius: 16px;}
+    .alert-wrap-inner .alert-msg {font-size: 16px;height: auto;}
+    .button-area {width: calc(100% - 36px);padding: 16px 0 18px;gap: 7px;}
+    .alert-wrap .btn-close-alert {width:25px;height:25px;background-size: 25px auto;}
     .modal-wrap .nobg-layer .btn-close {width:17px;height: 17px;background-size: 17px auto;right:12px;top:12px;}
     .btn-close-popup button {font-size: 16px;}    
     .checkbox input[type="checkbox"] + label{        
@@ -327,10 +330,14 @@ body.modal-open {height: 100%;overflow: hidden;}
 }
 
 @media (max-width: 320px) {   
+    .left-sect .footer .button-area {width: 100%;}
     .left-sect .footer .button-area a {padding: 0 7px;}
     .checkbox input[type="checkbox"] + label {font-size: 13px;}
     .btn-close-popup button {font-size: 13px;}
     .checkbox input[type="checkbox"] + label::after {top:0;}
+    .alert-wrap {width: calc(100% - 36px);}
+    .alert-wrap-inner .alert-msg {font-size: 16px;height: auto;}
+    .button-area {width: calc(100% - 36px);padding: 16px 0 18px;gap: 7px;}
 }
 
 @keyframes emphasis {
